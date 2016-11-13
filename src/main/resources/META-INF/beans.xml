@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+
+    <bean id="etudiant1" class="fr.mrmint.Etudiant">
+        <property name="nomEtudiant" value="Mr Mint" />
+    </bean>
+
+    <bean id="etudiant2" class="fr.mrmint.Etudiant">
+        <property name="nomEtudiant" value="Jules" />
+    </bean>
+
+    <bean id="injected1" class="fr.mrmint.Injected">
+        <property name="etudiant" ref="etudiant1" />
+    </bean>
+
+    <bean id="injected2" class="fr.mrmint.Injected">
+        <property name="etudiant" ref="etudiant2" />
+    </bean>
+    </beans>
